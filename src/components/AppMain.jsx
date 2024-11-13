@@ -1,3 +1,4 @@
+import posts from '../assets/data/posts.js'
 import PostsCard from './PostsCard/PostsCard.jsx';
 
 export default function AppMain(){
@@ -9,14 +10,13 @@ export default function AppMain(){
         <main>
 
             <div className="main_container">
-                <div className="row post_row">
-                    <div className="col-4 col_photo">
+                <div className="card">
+                    
                        
-                        < PostsCard />
-                    </div>
+                        {posts.map((post, id)=> <PostsCard key={id} post={post} />)}
+
+                    
                 </div>
-
-
 
             </div>
         </main>
